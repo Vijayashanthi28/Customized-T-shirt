@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Hanuman&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="navbar">
+        <a href="#" class="logo">DAZZI</a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="logo.html">Logo</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="custom shirt.html">Shop</a></li>
+        </ul>
+        
+        <div class="right-section">
+            <div class="search-container">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="search-box" placeholder="Search">
+            </div>
+          <a href="signin.html" style="text-decoration: none;"> <button class="icon-button" title="Account"><i class="fa-solid fa-user"></i></button></a> 
+            <button class="icon-button" title="Cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+    </nav>
+
+     <div class="payment-container">
+        <h1 class="payment-header">Make Payment</h1>
+        
+        <div class="payment-content">
+            <div class="product-info-section">
+                <h2 class="product-details-title">Product Details</h2>
+                
+                <div class="product-info-row">
+                    <span class="product-label">Product Name</span>
+                    <span class="product-value">: Lady Anime T Shirt</span>
+                </div>
+                
+                <div class="product-info-row">
+                    <span class="product-label">Size</span>
+                    <span class="product-value">: Small</span>
+                </div>
+                
+                <div class="product-info-row">
+                    <span class="product-label">Colour</span>
+                    <span class="product-value">: Blue</span>
+                </div>
+                
+                <div class="product-info-row">
+                    <span class="product-label">Quantity</span>
+                    <span class="product-value">: 1</span>
+                </div>
+
+                <h2 class="payment-details-title">Payment Detail</h2>
+                
+                <div class="product-info-row">
+                    <span class="product-label">Price</span>
+                    <span class="product-value">: 1299</span>
+                </div>
+                
+                <div class="product-info-row">
+                    <span class="product-label">Tax</span>
+                    <span class="product-value">: 30 (2%)</span>
+                </div>
+                
+                <div class="product-info-row">
+                    <span class="product-label">Total Amount</span>
+                    <span class="product-value">: 1330</span>
+                </div>
+
+                <h2 class="payment-method-title">Pay via</h2>
+                
+                <div class="payment-option-item" onclick="selectPaymentMethod('Phone Pe')">
+                    <input type="radio" class="payment-radio-input" name="payment_method" value="phone_pe" id="phone_pe">
+                    <label class="payment-option-label" for="phone_pe">Phone Pe</label>
+                </div>
+                
+                <div class="payment-option-item">
+  <input type="radio"  class="payment-radio-input"  name="payment_method" value="gpay"  id="gpay" onclick="redirectToPayment()">
+  <label class="payment-option-label" for="gpay">Gpay</label>
+</div>
+                
+                <div class="payment-option-item" onclick="selectPaymentMethod('Upi')">
+                    <input type="radio" class="payment-radio-input" name="payment_method" value="upi" id="upi" checked>
+                    <label class="payment-option-label" for="upi">Upi</label>
+                </div>
+            </div>
+            
+            <div class="product-image-section">
+                <img src="images/Anime/2.jpg" alt="Lady Anime T Shirt" class="product-shirt-image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPayment() {
+    window.location.href = "payment.html";
+  }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Hanuman&display=swap" rel="stylesheet"/>
+</head>
+<body>
+ <nav class="navbar">
+        <a href="#" class="logo">DAZZI</a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="logo.html">Logo</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="custom shirt.html">Shop</a></li>
+        </ul>
+        
+        <div class="right-section">
+            <div class="search-container">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="search-box" placeholder="Search">
+            </div>
+          <a href="signin.html" style="text-decoration: none;"> <button class="icon-button" title="Account"><i class="fa-solid fa-user"></i></button></a> 
+            <button class="icon-button" title="Cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+    </nav>
+      <!-- Hero Section -->
+    <section class="customization-hero-section">
+        <div class="customization-hero-content">
+            <h1>Customize Your Favorite<br>Character On your shirt</h1>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="customization-main-container">
+        <!-- Filter Sidebar -->
+        <aside class="filter-sidebar-panel">
+            <button class="clear-filters-button" onclick="clearAllFilters()">Clear All</button>
+            
+            <div class="filter-category-section">
+                <h3 class="filter-category-title">Tags</h3>
+                <ul class="filter-option-list">
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="mens-tshirt" data-filter="tag" data-value="mens">
+                        <label for="mens-tshirt" class="filter-option-label">Mens T shirt</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="womens-tshirt" data-filter="tag" data-value="womens">
+                        <label for="womens-tshirt" class="filter-option-label">Womens T shirt</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="children-special" data-filter="tag" data-value="children">
+                        <label for="children-special" class="filter-option-label">Children Special</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-category-section">
+                <h3 class="filter-category-title">Colour</h3>
+                <ul class="filter-option-list">
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="green-color" data-filter="color" data-value="green">
+                        <label for="green-color" class="filter-option-label">Green</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="pink-color" data-filter="color" data-value="pink">
+                        <label for="pink-color" class="filter-option-label">Pink</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="red-color" data-filter="color" data-value="red">
+                        <label for="red-color" class="filter-option-label">Red</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="blue-color" data-filter="color" data-value="blue">
+                        <label for="blue-color" class="filter-option-label">Blue</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-category-section">
+                <h3 class="filter-category-title">Size</h3>
+                <ul class="filter-option-list">
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="medium-size" data-filter="size" data-value="medium">
+                        <label for="medium-size" class="filter-option-label">Medium</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="small-size" data-filter="size" data-value="small">
+                        <label for="small-size" class="filter-option-label">Small</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="large-size" data-filter="size" data-value="large">
+                        <label for="large-size" class="filter-option-label">Large</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="extra-large" data-filter="size" data-value="xl">
+                        <label for="extra-large" class="filter-option-label">Extra Large</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-category-section">
+                <h3 class="filter-category-title">Category</h3>
+                <ul class="filter-option-list">
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="anime-category" data-filter="category" data-value="anime">
+                        <label for="anime-category" class="filter-option-label">Anime</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="cartoon-category" data-filter="category" data-value="cartoon">
+                        <label for="cartoon-category" class="filter-option-label">Cartoon</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="slogan-category" data-filter="category" data-value="slogan">
+                        <label for="slogan-category" class="filter-option-label">Slogan</label>
+                    </li>
+                    <li class="filter-option-item">
+                        <input type="checkbox" class="filter-checkbox-input" id="funny-category" data-filter="category" data-value="funny">
+                        <label for="funny-category" class="filter-option-label">Funny</label>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="submit-filters-button" onclick="applyFilters()">Submit</button>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content-display-area">
+            <!-- Products Grid -->
+            <div class="products-showcase-grid" id="productsGrid">
+                <div class="product-showcase-card" data-tag="children" data-color="pink" data-size="small" data-category="cartoon">
+                    <div class="product-image-container ">
+                        <img src="images/Anime/11.jpg">
+                    </div>
+                    <div class="product-stock-label stock-available-label">On Stock</div>
+                    <div class="product-info-section">
+                        <h3 class="product-name-text">Cartoon T Shirt</h3>
+                        <p class="product-category-text">Premium Hoodie</p>
+                         <p class="product-category-price">Rs. 699</p>
+                    </div>
+                </div>
+
+                <div class="product-showcase-card" data-tag="mens" data-color="blue" data-size="medium" data-category="anime">
+                     <div class="product-image-container ">
+                        <img src="images/Cartoon/18.jpg">
+                    </div>
+                    <div class="product-stock-label stock-limited-label">Limited Stock</div>
+                    <div class="product-info-section">
+                        <h3 class="product-name-text">Pikachu T Shirt</h3>
+                        <p class="product-category-text">Premium Shirt</p>
+                         <p class="product-category-price">Rs. 999</p>
+                    </div>
+                </div>
+
+                <div class="product-showcase-card" data-tag="children" data-color="red" data-size="small" data-category="cartoon">
+                     <div class="product-image-container ">
+                        <img src="images/Cartoon/25.jpg">
+                    </div>
+                    <div class="product-stock-label stock-limited-label">Limited Stock</div>
+                    <div class="product-info-section">
+                        <h3 class="product-name-text">Tom T Shirt</h3>
+                        <p class="product-category-text">Premium Shirt</p>
+                         <p class="product-category-price">Rs. 499</p>
+                    </div>
+                </div>
+
+                <div class="product-showcase-card" data-tag="womens" data-color="pink" data-size="medium" data-category="funny">
+                     <div class="product-image-container ">
+                        <img src="images/Slogan/6.jpg">
+                    </div>
+                    <div class="product-stock-label stock-limited-label">Limited Stock</div>
+                    <div class="product-info-section">
+                        <h3 class="product-name-text">Slogan Pink T Shirt</h3>
+                        <p class="product-category-text">Premium Shirt</p>
+                         <p class="product-category-price">Rs. 799</p>
+                    </div>
+                </div>
+
+                <div class="product-showcase-card" data-tag="mens" data-color="red" data-size="large" data-category="anime">
+                     <div class="product-image-container ">
+                        <img src="images/Anime/23.jpg">
+                    </div>
+                    <div class="product-stock-label stock-limited-label">Limited Stock</div>
+                    <div class="product-info-section">
+                        <h3 class="product-name-text">Gray Anime T Shirt</h3>
+                        <p class="product-category-text">Premium Hoodie</p>
+                         <p class="product-category-price">Rs. 1299</p>
+                    </div>
+                </div>
+
+                <div class="product-showcase-card" data-tag="womens" data-color="green" data-size="medium" data-category="slogan">
+                      <div class="product-image-container ">
+                        <img src="images/Slogan/17.jpg">
+                    </div>
+                    <div class="product-stock-label stock-limited-label">Limited Stock</div>
+                    <div class="product-info-section">
+                        <h3 class="product-name-text">Slogan T Shirt</h3>
+                        <p class="product-category-text">Premium Hoodie</p>
+                         <p class="product-category-price">Rs. 599</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explore More -->
+            <div class="explore-more-container">
+                <button class="explore-more-button">Explore More</button>
+            </div>
+
+            <!-- Logo Section -->
+            <section class="logo-customization-section">
+                <h2 class="logo-section-title">Want To customize Logo?</h2>
+                
+                <div class="logo-showcase-grid">
+                    <div class="logo-showcase-card">
+                        <div class="logo-image-placeholder"><img src="images/9.jpg"></div>
+                        
+                        <div class="logo-stock-badge">LIMITED STOCK</div>
+                        <h3 class="logo-name-text">Designer Logo</h3>
+                        <p class="product-price-text ">Rs. 499</p>
+                    </div>
+
+                    <div class="logo-showcase-card">
+                       <div class="logo-image-placeholder"><img src="images/10.jpg"></div>
+                        <div class="logo-stock-badge">LIMITED STOCK</div>
+                        <h3 class="logo-name-text">Clothing Logo</h3>
+                        <p class="product-price-text ">Rs. 799</p>
+                    </div>
+
+                    <div class="logo-showcase-card">
+                        <div class="logo-image-placeholder"><img src="images/11.jpg"></div>
+                        <div class="logo-stock-badge">LIMITED STOCK</div>
+                        <h3 class="logo-name-text">Painting  Logo</h3>
+                        <p class="product-price-text ">Rs. 399</p>
+                    </div>
+
+                    <div class="logo-showcase-card">
+                        <div class="logo-image-placeholder"><img src="images/12.png"></div>
+                        <div class="logo-stock-badge">LIMITED STOCK</div>
+                        <h3 class="logo-name-text">New Logo</h3>
+                        <p class="product-price-text ">Rs. 399</p>
+
+                    </div>
+
+                    <div class="logo-showcase-card">
+                         <div class="logo-image-placeholder"><img src="images/14.jpg"></div>
+                        <div class="logo-stock-badge">LIMITED STOCK</div>
+                        <h3 class="logo-name-text">Science Logo</h3>
+                        <p class="product-price-text ">Rs. 599</p>
+                    </div>
+
+                    <div class="logo-showcase-card">
+                         <div class="logo-image-placeholder"><img src="images/15.png"></div>
+                        <div class="logo-stock-badge">LIMITED STOCK</div>
+                        <h3 class="logo-name-text">Clothing Logo</h3>
+                        <p class="product-price-text ">Rs. 599</p>
+                    </div>
+                </div>
+
+                <!-- Second Explore More -->
+                <div class="explore-more-container">
+                    <button class="explore-more-button">Explore More</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        //Customization filter
+        // Filter functionality
+        let activeFilters = {
+            tag: [],
+            color: [],
+            size: [],
+            category: []
+        };
+
+        // Initialize filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.filter-checkbox-input');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateActiveFilters);
+            });
+        });
+
+        function updateActiveFilters() {
+            // Reset active filters
+            activeFilters = {
+                tag: [],
+                color: [],
+                size: [],
+                category: []
+            };
+
+            // Get all checked checkboxes
+            const checkedBoxes = document.querySelectorAll('.filter-checkbox-input:checked');
+            
+            checkedBoxes.forEach(checkbox => {
+                const filterType = checkbox.dataset.filter;
+                const filterValue = checkbox.dataset.value;
+                
+                if (activeFilters[filterType]) {
+                    activeFilters[filterType].push(filterValue);
+                }
+            });
+
+            // Update visual feedback
+            updateFilterVisualFeedback();
+        }
+
+        function updateFilterVisualFeedback() {
+            const filterItems = document.querySelectorAll('.filter-option-item');
+            filterItems.forEach(item => {
+                const checkbox = item.querySelector('.filter-checkbox-input');
+                if (checkbox && checkbox.checked) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        function applyFilters() {
+            const products = document.querySelectorAll('.product-showcase-card');
+            let visibleCount = 0;
+
+            products.forEach(product => {
+                let shouldShow = true;
+
+                // Check each filter category
+                for (let filterType in activeFilters) {
+                    if (activeFilters[filterType].length > 0) {
+                        const productValue = product.dataset[filterType];
+                        if (!activeFilters[filterType].includes(productValue)) {
+                            shouldShow = false;
+                            break;
+                        }
+                    }
+                }
+
+                // Show/hide product
+                if (shouldShow) {
+                    product.classList.remove('filter-hidden');
+                    visibleCount++;
+                } else {
+                    product.classList.add('filter-hidden');
+                }
+            });
+
+            // Show feedback
+            showFilterFeedback(visibleCount);
+        }
+
+        function clearAllFilters() {
+            // Uncheck all checkboxes
+            const checkboxes = document.querySelectorAll('.filter-checkbox-input');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
+
+            // Reset active filters
+            activeFilters = {
+                tag: [],
+                color: [],
+                size: [],
+                category: []
+            };
+
+            // Show all products
+            const products = document.querySelectorAll('.product-showcase-card');
+            products.forEach(product => {
+                product.classList.remove('filter-hidden');
+            });
+
+            // Update visual feedback
+            updateFilterVisualFeedback();
+            
+            // Show feedback
+            showFilterFeedback(products.length);
+        }
+
+        function showFilterFeedback(count) {
+            // Create or update feedback message
+            let feedback = document.getElementById('filter-feedback');
+            if (!feedback) {
+                feedback = document.createElement('div');
+                feedback.id = 'filter-feedback';
+                feedback.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #333;
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 8px;
+                    z-index: 1000;
+                    font-weight: bold;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                `;
+                document.body.appendChild(feedback);
+            }
+
+            feedback.textContent = `Showing ${count} product(s)`;
+            feedback.style.opacity = '1';
+
+            // Hide after 2 seconds
+            setTimeout(() => {
+                feedback.style.opacity = '0';
+            }, 2000);
+        }
+
+        // Auto-apply filters on checkbox change (optional)
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.filter-checkbox-input');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    updateActiveFilters();
+                    // Uncomment the line below to auto-apply filters without clicking Submit
+                    // applyFilters();
+                });
+            });
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('.product-showcase-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Add click animation
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Logo card interactions
+        document.querySelectorAll('.logo-showcase-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Add click animation
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

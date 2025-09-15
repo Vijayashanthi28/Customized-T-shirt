@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Hanuman&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+     <div class="gpay-container">
+        <!-- Payment Page Content -->
+        <div id="paymentPageContent" class="page-content">
+            <div class="gpay-logo-section">
+                <img src="images/gpay.png">
+            </div>
+
+            <div class="payment-content-area">
+                <div class="total-amount-section">
+                    <div class="total-due-label">Total Due : 1330</div>
+                    
+                </div>
+
+                <button class="payment-action-btn" onclick="processPayment()">Pay Now</button>
+            </div>
+        </div>
+
+        <!-- Success Page Content (Initially Hidden) -->
+        <div id="successPageContent" class="page-content hidden-content">
+           <div class="gpay-logo-section">
+                <img src="images/gpay.png">
+            </div>
+
+            <div class="success-content-area">
+                <div class="success-icon-wrapper">
+                    <div class="success-checkmark">
+                        <span class="checkmark-symbol">✓</span>
+                    </div>
+                </div>
+
+                <div class="success-message-section">
+                    <h2 class="thank-you-title">Thank You</h2>
+                    <p class="order-success-text">Your Order has been Successfully<br>Placed</p>
+                    <p class="shipping-info-text">Product will be Shipped in 3 working days</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

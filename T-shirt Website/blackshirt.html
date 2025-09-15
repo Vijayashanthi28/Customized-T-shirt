@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Hanuman&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+      <nav class="navbar">
+        <a href="#" class="logo">DAZZI</a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="logo.html">Logo</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="custom shirt.html">Shop</a></li>
+        </ul>
+        
+        <div class="right-section">
+            <div class="search-container">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="search-box" placeholder="Search">
+            </div>
+          <a href="signin.html" style="text-decoration: none;"> <button class="icon-button" title="Account"><i class="fa-solid fa-user"></i></button></a> 
+            <button class="icon-button" title="Cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+    </nav>
+       <div class="product-showcase-container">
+        <!-- Main Product Section -->
+        <div class="main-product-section">
+            <div class="featured-product-image">
+                <div class="stock-badge">Limited Stocks</div>
+                <img src="images/Anime/2.jpg" 
+                     class="primary-shirt-display" 
+                     id="mainProductImage" 
+                     alt="Lady Anime T-Shirt">
+            </div>
+
+            <div class="product-details-panel">
+                <h1 class="product-main-title">Lady Anime Black T-shirt</h1>
+                
+                <h3 class="description-heading">Product Description:-</h3>
+                <p class="product-description-text">
+                    The Lady Anime Printed T-shirt for Men is an essential piece of summer apparel. This high-quality T-shirt combines the durability of 100% cotton with a trendy design to create a fashionable, comfortable look. The Half Sleeves, Round Necks, and classic color combos give it an added level of style. Perfect for any occasion, this breathable shirt will keep you cool during those hot summer days.
+                </p>
+
+                <table class="size-specifications-table">
+                    <thead>
+                        <tr>
+                            <th>Size</th>
+                            <th>Chest</th>
+                            <th>Length</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Small</td>
+                            <td>40</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>42</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>Large</td>
+                            <td>44</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Extra Large</td>
+                            <td>46</td>
+                            <td>31.5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Customization Options Section -->
+        <div class="customization-options-section">
+            <h2 class="customization-section-title">Customize Color T-shirt</h2>
+            
+            <div class="color-variation-gallery">
+                <div class="shirt-color-option active-selection" data-color="red" onclick="changeShirtColor('red')">
+                    <img src="images/download.jpg" 
+                         class="shirt-variant-image" 
+                         alt="Red T-Shirt">
+                    <div class="color-label">Red</div>
+                </div>
+                
+                <div class="shirt-color-option" data-color="blue" onclick="changeShirtColor('blue')">
+                    <img src="images/blue.jpg" 
+                         class="shirt-variant-image" 
+                         alt="Blue T-Shirt">
+                    <div class="color-label">Blue</div>
+                </div>
+                
+                <div class="shirt-color-option" data-color="yellow" onclick="changeShirtColor('yellow')">
+                    <img src="images/yellow.jpg" 
+                         class="shirt-variant-image" 
+                         alt="Yellow T-Shirt">
+                    <div class="color-label">Yellow</div>
+                </div>
+                
+                <div class="shirt-color-option" data-color="black" onclick="changeShirtColor('black')">
+                    <img src="images/black.jpg" 
+                         class="shirt-variant-image" 
+                         alt="Black T-Shirt">
+                    <div class="color-label">Black</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Selection Controls Panel -->
+        <div class="selection-controls-panel">
+            <h2 class="panel-product-title">Lady Anime T-Shirt</h2>
+            
+            <div class="option-selection-group">
+                <span class="selection-label">Select Color :</span>
+                <div class="color-picker-dots">
+                    <div class="color-choice-dot red-variant selected-color" 
+                         data-color="red" 
+                         onclick="changeShirtColor('red')" 
+                         title="Red"></div>
+                    <div class="color-choice-dot blue-variant" 
+                         data-color="blue" 
+                         onclick="changeShirtColor('blue')" 
+                         title="Blue"></div>
+                    <div class="color-choice-dot yellow-variant" 
+                         data-color="yellow" 
+                         onclick="changeShirtColor('yellow')" 
+                         title="Yellow"></div>
+                    <div class="color-choice-dot black-variant" 
+                         data-color="black" 
+                         onclick="changeShirtColor('black')" 
+                         title="Black"></div>
+                </div>
+            </div>
+
+            <div class="option-selection-group">
+                <span class="selection-label">Select Size :</span>
+                <span class="size-selection-text">Small / Medium / Large / Extra Large</span>
+            </div>
+
+            <div class="option-selection-group">
+                <span class="selection-label">Quantity :</span>
+                <div class="quantity-control-group">
+                    <button class="quantity-adjust-btn" onclick="decreaseQuantity()">-</button>
+                    <input type="text" class="quantity-display-input" id="quantityInput" value="1" readonly>
+                    <button class="quantity-adjust-btn" onclick="increaseQuantity()">+</button>
+                </div>
+            </div>
+
+            <div class="option-selection-group">
+                <span class="selection-label">Total Price :</span>
+                <span class="price-display-text" id="totalPrice">₹1,299 + Tax</span>
+            </div>
+
+            <div class="option-selection-group">
+                <span class="selection-label">Shirt Neck Design :</span>
+                <span class="size-selection-text">Round / V-neck</span>
+            </div>
+        </div>
+
+        <!-- Customization Prompt Section -->
+        <div class="customization-prompt-section">
+            <p class="customization-prompt-text">
+                Want to customize more 
+                <a href="" class="customization-link" onclick="showCustomizationOptions()">click Here</a>
+            </p>
+        </div>
+
+        <!-- Payment Action Section -->
+        <div class="payment-action-section">
+           <a href="billing.html"> <button class="pay-now-button" onclick="proceedToPayment()">Pay Now</button></a>
+        </div>
+    </div>
+    
+
+     <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ s</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Service</h3>
+                <ul>
+                    <li><a href="#">Mens T shirt</a></li>
+                    <li><a href="#">Womens T shirt</a></li>
+                    <li><a href="#">Sweat shirt</a></li>
+                    <li><a href="#">Drop Cut</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Get in Touch with us</h3>
+                <div class="contact-info">
+                    <p>Reach us :</p>
+                    <p>support@dazzlstores.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-section">
+            <h4 class="social-title">Connect With Us</h4>
+            <div class="social-icons">
+                <a href="#" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p class="payment-info">Our site uses secure payment gateways. All major credit & debit cards accepted</p>
+        </div>
+    </footer>
+
+
+    <script>
+                //Black T-shirt
+        // Image mapping for different colors
+        const colorImages = {
+            'red': 'images/download.jpg',
+            'blue': 'images/blue.jpg',
+            'yellow': 'images/yellow.jpg',
+            'black': 'images/black.jpg'
+        };
+
+        // Base price for calculation
+        const basePrice = 1299;
+        let currentQuantity = 1;
+        let currentColor = 'red';
+
+        // Function to change shirt color and main image
+        function changeShirtColor(selectedColor) {
+            currentColor = selectedColor;
+            
+            // Update main product image with smooth transition
+            const mainImage = document.getElementById('mainProductImage');
+            mainImage.style.opacity = '0.5';
+            
+            setTimeout(() => {
+                mainImage.src = colorImages[selectedColor];
+                mainImage.style.opacity = '1';
+            }, 200);
+
+            // Update color selector dots
+            document.querySelectorAll('.color-choice-dot').forEach(dot => {
+                dot.classList.remove('selected-color');
+            });
+            document.querySelector(`.color-choice-dot[data-color="${selectedColor}"]`).classList.add('selected-color');
+
+            // Update gallery selection
+            document.querySelectorAll('.shirt-color-option').forEach(option => {
+                option.classList.remove('active-selection');
+            });
+            document.querySelector(`.shirt-color-option[data-color="${selectedColor}"]`).classList.add('active-selection');
+
+            // Add scaling animation to main image
+            showColorChangeAnimation();
+        }
+
+        // Function to show color change animation
+        function showColorChangeAnimation() {
+            const mainImage = document.getElementById('mainProductImage');
+            mainImage.style.transform = 'scale(1.05)';
+            mainImage.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+            
+            setTimeout(() => {
+                mainImage.style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        // Function to increase quantity
+        function increaseQuantity() {
+            if (currentQuantity < 10) {
+                currentQuantity++;
+                updateQuantityDisplay();
+                updateTotalPrice();
+                animateQuantityButton('increase');
+            }
+        }
+
+        // Function to decrease quantity
+        function decreaseQuantity() {
+            if (currentQuantity > 1) {
+                currentQuantity--;
+                updateQuantityDisplay();
+                updateTotalPrice();
+                animateQuantityButton('decrease');
+            }
+        }
+
+        // Function to update quantity display
+        function updateQuantityDisplay() {
+            const quantityInput = document.getElementById('quantityInput');
+            quantityInput.value = currentQuantity;
+            
+            // Add animation to quantity input
+            quantityInput.style.transform = 'scale(1.1)';
+            quantityInput.style.transition = 'transform 0.2s ease';
+            
+            setTimeout(() => {
+                quantityInput.style.transform = 'scale(1)';
+            }, 200);
+        }
+
+        // Function to animate quantity buttons
+        function animateQuantityButton(action) {
+            const buttons = document.querySelectorAll('.quantity-adjust-btn');
+            const button = action === 'increase' ? buttons[1] : buttons[0];
+            
+            button.style.transform = 'scale(0.9)';
+            button.style.transition = 'transform 0.1s ease';
+            
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+            }, 100);
+        }
+
+        // Function to update total price
+        function updateTotalPrice() {
+            const totalPrice = basePrice * currentQuantity;
+            const priceElement = document.getElementById('totalPrice');
+            priceElement.textContent = `₹${totalPrice.toLocaleString()} + Tax`;
+            
+            // Add animation to price update
+            priceElement.style.color = '#e74c3c';
+            priceElement.style.transition = 'color 0.3s ease';
+            
+            setTimeout(() => {
+                priceElement.style.color = '#333';
+            }, 300);
+        }
+
+        // Function to show customization options
+        function showCustomizationOptions() {
+            alert('Advanced customization options:\n\n• Custom text/logo printing\n• Size modifications\n• Fabric options\n• Bulk order discounts\n\nContact us for more details!');
+        }
+
+       
+        // Initialize the page
+        function initializePage() {
+            updateTotalPrice();
+            
+            // Add hover effects to color dots
+            document.querySelectorAll('.color-choice-dot').forEach(dot => {
+                dot.addEventListener('mouseenter', function() {
+                    if (!this.classList.contains('selected-color')) {
+                        this.style.transform = 'scale(1.1)';
+                    }
+                });
+                
+                dot.addEventListener('mouseleave', function() {
+                    if (!this.classList.contains('selected-color')) {
+                        this.style.transform = 'scale(1)';
+                    }
+                });
+            });
+
+            // Add keyboard support for quantity controls
+            document.getElementById('quantityInput').addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    increaseQuantity();
+                } else if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    decreaseQuantity();
+                }
+            });
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
